@@ -6,7 +6,7 @@ void output(float base, float height, float area);
 
 void main()
 {  
-  float b,h,a;
+  float b,h;
   input(b,h);
 }
 

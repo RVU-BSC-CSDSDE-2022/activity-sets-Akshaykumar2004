@@ -24,5 +24,5 @@ int add(int a,int b){
   return sum;
 }
 void output(int a,int b,int sum){
-  printf("the sum of %d nd %d is %d",a,b,sum);
+  printf("the sum of %d nd %d is %d\n",a,b,sum);
 }

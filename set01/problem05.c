@@ -18,15 +18,10 @@ int input(){
   return n;
 }
 int compare(int a,int b,int c){
-  if((a>b)&&(a>c)){
-    return a;
-  }
-  else if((b>=a)&&(b>=c)){
-    return b;
-  }
-  else{
-    return c;
-  }
+int max=b;
+  if(a>b){max = a;}
+  if(c>max){max=c;}
+  return max;
 }
 void output(int a,int b,int c,int max){
   printf("the largest of %d,%d and %d is %d\n",a,b,c,max);
