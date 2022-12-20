@@ -7,7 +7,7 @@ void main(){
   char str_1[1000],str_2[1000];
   int result;
   input_two_strings(str_1,str_2);
-  result=stringcompare(str_1,str_2);
+  result=stringcompare("","");//str_1,str_2);
   // printf("%d\n",result);
   output(str_1,str_2,result);
 }
@@ -20,19 +20,24 @@ void input_two_strings(char *string1,char *string2)
 }
 int stringcompare(char *string1, char *string2){
   int res=75;
-  for(int i=0;/*(string1[i] != '\0')||(string2[i] != '\0')*/i<1000;i++){
-    printf("index = %d,%c,%c\n",i,string1[i],string2[i]);  
-    res = (string1[i]<string2[i])? 2:(string1[i]>string2[i])? 1: 0;
+  if((string1[0] == '\0') || (string2[0] == '\0' )){
+    res = 0;
+  }else{
+    {for(int i=0;(string1[i] != '\0')||(string2[i] != '\0');i++){
+      res = (string1[i]<string2[i])? 2:(string1[i]>string2[i])? 1: 0;
     if(res>0){
       break;
     }
   }
+      }
+    }
   return res;
   }
+
 void output(char *string1,char *string2 ,int result){
   printf("reslt = %d\n",result);
   if(result == 0){
-    printf("the two strings are equal\n");
+    printf("the two strings are equal");
   }
   else if(result == 1)
   {
