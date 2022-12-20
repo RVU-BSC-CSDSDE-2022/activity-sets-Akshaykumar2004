@@ -20,7 +20,7 @@ float input(){
 float square_root(float n){
   float x,res,sqr;
   res=1;
-  while((sqr*sqr) != n){
+  while( 1 ){//(sqr*sqr) != n){
     x=0.5*(res+(n/res));
     if(x == res){
       sqr = x;

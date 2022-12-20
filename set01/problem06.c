@@ -21,7 +21,7 @@ void compare(int a,int b,int c,int *max){
   if((a>b)&&(a>c)){
     *max = a;
   }
-  else if((b>=a)&&(b>=c)){
+  else if((b>c){
     *max = b;
   }
   else{

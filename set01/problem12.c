@@ -5,7 +5,9 @@ struct _complex {
 typedef struct _complex complex;
 
 int get_n();
+complex input_complex();
 void input_n_complex(int n, complex c[n]);
+complex add(complex a, complex b);
 complex add_n_complex(int n, complex c[n]);
 void output(int n, complex c[n], complex result);
 
@@ -22,17 +24,31 @@ int get_n(){
   scanf("%d",&n);
   return n;
 }
+complex input_complex(){
+  complex a;
+  printf("enter a complex number:");
+  scanf("%f%f",&a.real,&a.imaginary);
+  return a;
+}
 void input_n_complex(int n,complex c[n]){
   for(int i=0;i<n;i++){
-    printf("enter a complex number:");
-    scanf("%f%f",&c[i].real,&c[i].imaginary);
+   c[i]=input_complex();
+    // printf("enter a complex number:");
+    // scanf("%f%f",&c[i].real,&c[i].imaginary);
   }
+}
+complex add_complex(complex a,complex b){
+  complex sum;
+  sum.real=a.real+b.real;
+  sum.imaginary=a.imaginary+b.imaginary;
+  return sum;
 }
 complex add_n_complex(int n,complex c[n]){
   complex sum={0,0};
   for(int i=0;i<n;i++){
-    sum.real=sum.real+c[i].real;
-    sum.imaginary=sum.imaginary+c[i].imaginary;
+    sum = add_complex(sum,c[i]);
+    // sum.real=sum.real+c[i].real;
+    // sum.imaginary=sum.imaginary+c[i].imaginary;
   }return sum;
 }
 void output(int n,complex c[n],complex result){

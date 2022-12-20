@@ -24,5 +24,5 @@ int sum_n_nos(int n){
   }
 }
 void output(int n,int sum){
-  printf("the sum of all natural numbers still %d is %d\n",n,sum);
+  printf("the sum of all natural numbers till %d is %d\n",n,sum);
 }

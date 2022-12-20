@@ -39,31 +39,41 @@ int is_composite(int n)
 {  
   int i,res;
   {
-     for(i=0;i<n;i++)
+     for(i=2;i<n;i++)
      {
-       while((i>0) && (i<n))
-       {
-        res= n % i;
-        if(i>1)
-        {
-          if( res == 0)
-          {
-            return 1;
-            break;
-          }
-          else
-          {
-            return 0;
-          }
-      }
-      else
-      {
-        i=i+1;
-      }
-     }
+       res= n % i;
+       printf("%d,",res);
+       if(res == 0){
+         return 1;
+         break;
+       }
+       }
     }
-   }
-}
+  }
+       
+   //     while((i>0) && (i<n))
+   //     {
+   //      res= n % i;
+   //      if(i>1)
+   //      {
+   //        if( res == 0)
+   //        {
+   //          return 1;
+   //          break;
+   //        }
+   //        else
+   //        {
+   //          return 0;
+   //        }
+   //    }
+   //    else
+   //    {
+   //      i=i+1;
+   //    }
+   //   }
+   //  }
+   // }
+
 
 void output(int sum){
   printf("the sum of all composites is %d",sum);
