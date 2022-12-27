@@ -1,5 +1,7 @@
 #include<stdio.h>
-int main(){
-  printf("akshay\n");
-  return 0;
+int main(void)
+{
+char name[]="akshay";   
+printf("%s\n",name);
+return 0;
 }

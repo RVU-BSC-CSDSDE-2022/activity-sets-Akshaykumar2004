@@ -20,17 +20,22 @@ void input_two_strings(char *string1,char *string2)
 }
 int stringcompare(char *string1, char *string2){
   int res=75;
-  if((string1[0] == '\0') || (string2[0] == '\0' )){
-    res = 0;
-  }else{
-    {for(int i=0;(string1[i] != '\0')||(string2[i] != '\0');i++){
-      res = (string1[i]<string2[i])? 2:(string1[i]>string2[i])? 1: 0;
-    if(res>0){
-      break;
-    }
-  }
+  // if((string1[0] == '\0') && (string2[0] == '\0' ))
+  // {
+  //   res = 0;
+  // }
+  // else
+  // {
+    for(int i=0;((string1[i] != '\0')||(string2[i] != '\0'));i++) //&&(string1[i] == string2[i]) ;i++)
+    {
+      
+      res = (string1[i]<string2[i])? 1:(string1[i]>string2[i])? -1: 0;
+      if(res>0)
+      {
+        break;
       }
     }
+  // } 
   return res;
   }
 

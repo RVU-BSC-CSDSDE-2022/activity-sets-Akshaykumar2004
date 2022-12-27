@@ -16,12 +16,10 @@ int input_n(){
   return n;
 }
 int sum_n_nos(int n){
-  if(n>0){
-    return n+sum_n_nos(n-1);
-  }
-  else{
-    return 0;
-  }
+ int sum=0;
+  for(int i=0;i<=n;i++){
+    sum=sum+i;
+      }return sum;
 }
 void output(int n,int sum){
   printf("the sum of all natural numbers till %d is %d\n",n,sum);

@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<string.h>
+//#include<string.h>
 void input_string(char *a);
 void str_reverse(char *str, char *rev_str);
 void output(char *a, char *reverse_a);
@@ -14,10 +14,14 @@ void input_string(char *a){
   scanf("%s",a);
 }
 void str_reverse(char *str,char *rev_str){
-  int n=strlen(str);
+  int n=str_len(str);
   for(int i=0;i<n;i++){
     rev_str[i] = str[(n-1) - i];
   }
+}
+int str_len(char *str){
+  int count=0;
+  for(int i=0;str[i] != '\0';i++){count+=i;}
 }
 void output(char *a,char *reverse_a){
   printf("the string entered by you is '%s',after reversing '%s'\n",a,reverse_a);
