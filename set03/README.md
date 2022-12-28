@@ -169,29 +169,27 @@ The distance between the points (1.000000,1.000000) and (2.000000,2.000000) is 1
 
 ***Function Declarations***
 ```c
-typedef struct point {
-    float start_end_x, start_end_y;
-} Point;
+typedef struct point{  
+  float x, y;
+} point;
 
-typedef struct line {
-    Point p;
-    float distance;
-} Line;
+typedef struct side{
+  point p1,p2;
+ float distance;
+} side;
 
-typedef struct polygon {
-    int sides;
-    Line l[100];
-    float perimeter;
-} Polygon;
+typedef struct polygon{
+  side sides[100];
+  point points[100];
+  float perimeter;
+} polygon;
 
 int input_n();
-Line input_line(int n);
-void input_n_lines(int n, Line *l);
-int input_polygon(Polygon *p);
-float find_distance(Point a, Point b);
-void find_n_distance(int n, Line *l);
-void find_perimeter(Polygon* p);
-void output(Polygon p);
+point input_point();
+void initialize_sides(int n,polygon *p);
+float find_distance(point a,point b);
+void find_perimeter(int n,polygon *p);
+void output(polygon p);
 ```
 
 ***Input***
