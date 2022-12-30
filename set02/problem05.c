@@ -22,8 +22,7 @@ int find_gcd(int a,int b){
         }else{
       b = b-a;
         }
-  return (a,b);
-  }
+  }return a;
 }
 void output(int a,int b,int gcd){
   printf("the gcd of %d and %d is %d\n",a,b,gcd);
